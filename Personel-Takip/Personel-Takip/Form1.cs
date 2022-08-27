@@ -14,7 +14,7 @@ namespace Personel_Takip
 {
     public partial class Form1 : Form
     {
-        string portismi, banthizi;
+        public static string portismi, banthizi;
         string[] ports = SerialPort.GetPortNames();
 
 
@@ -27,7 +27,7 @@ namespace Personel_Takip
             foreach (string port in ports)
             {
                 comboBox1.Items.Add(port);
-                }
+            }
             comboBox2.Items.Add("300");
             comboBox2.Items.Add("1200");
             comboBox2.Items.Add("2400");
@@ -50,8 +50,7 @@ namespace Personel_Takip
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string kid;
-
+            
             timer1.Start();
             portismi = comboBox1.Text;
             banthizi = comboBox2.Text;
@@ -103,7 +102,23 @@ namespace Personel_Takip
                 label2.Text = sonuc;
             }
         }
-
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (portismi == null || banthizi == null)
+            {
+                MessageBox.Show("Bağlantı Kontrol Et");
+            }
+            else
+            {
+                timer1.Stop();
+                serialPort1.Close();
+                label1.Text = "Bağlantı Kapalı";
+                label1.ForeColor= Color.Red;
+                
+                kayit kyt = new kayit();
+                kyt.ShowDialog();
+            }   
+        }
 
 
     }

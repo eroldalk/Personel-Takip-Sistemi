@@ -9,3 +9,14 @@ C:\Users\Lenovo\Desktop\Personel-Takip\Personel-Takip\obj\Debug\Personel-Takip.c
 C:\Users\Lenovo\Desktop\Personel-Takip\Personel-Takip\obj\Debug\Personel-Takip.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Desktop\Personel-Takip\Personel-Takip\obj\Debug\Personel-Takip.exe
 C:\Users\Lenovo\Desktop\Personel-Takip\Personel-Takip\obj\Debug\Personel-Takip.pdb
+C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\bin\Debug\Personel-Takip.exe.config
+C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\bin\Debug\Personel-Takip.exe
+C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\bin\Debug\Personel-Takip.pdb
+C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\obj\Debug\Personel-Takip.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\obj\Debug\Personel-Takip.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\obj\Debug\Personel_Takip.Form1.resources
+C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\obj\Debug\Personel_Takip.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\obj\Debug\Personel-Takip.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\obj\Debug\Personel-Takip.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\obj\Debug\Personel-Takip.exe
+C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\obj\Debug\Personel-Takip.pdb
