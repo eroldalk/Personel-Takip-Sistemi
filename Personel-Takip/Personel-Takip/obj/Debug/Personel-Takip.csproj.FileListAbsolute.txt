@@ -20,3 +20,4 @@ C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\obj
 C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\obj\Debug\Personel-Takip.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\obj\Debug\Personel-Takip.exe
 C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\obj\Debug\Personel-Takip.pdb
+C:\Users\Lenovo\Desktop\Personel-Takip-Sistemi\Personel-Takip\Personel-Takip\obj\Debug\Personel_Takip.kayit.resources
