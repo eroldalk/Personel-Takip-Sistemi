@@ -13,7 +13,7 @@ namespace Personel_Takip
 {
     public partial class kayit : Form
     {
-        OleDbConnection bag = new OleDbConnection("Provider=Microsoft.Ace.OledDb.12.0;Data Source=Personel-Veri.accdb");
+        OleDbConnection bag = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Personel-Veri.accdb");
         OleDbCommand cmd = new OleDbCommand();
         
         public kayit()
@@ -64,6 +64,7 @@ namespace Personel_Takip
             comboBox1.Text = "Seçiniz";
             comboBox2.Text = "Seçiniz";
             textBox2.Text = "";
+            label8.Text = "";
          }
          private void button1_Click(object sender, EventArgs e)
          {
@@ -85,22 +86,43 @@ namespace Personel_Takip
          }
         private void button2_Click(object sender, EventArgs e)
         {
-            bag.Open();
-            cmd.Connection = bag;
-           //cmd.CommandText = "INSERT INTO Tablo (kid,isim,sinif,sube,resim)VALUES ('" + label6.Text + "','" + textBox1.Text + "','" + comboBox1.Text + "','" + comboBox2.Text + "','" + textBox2.Text + "')";
-            cmd.CommandText = "INSERT INTO Tablo (kid,isim,sinif,sube,resim)VALUES " +
-            "('"+label6.Text+ "','" + textBox1.Text + "','" + comboBox1.Text + "','" + comboBox2.Text + "','" + textBox2.Text + "')";
-            cmd.ExecuteNonQuery();
+            if (label6.Text == "___________" || textBox1.Text == "" || comboBox1.Text == "seçiniz" || comboBox2.Text == "seçiniz" || textBox2.Text == "")
+            {
+                label8.Text = "Bilgileriniz Eksik";
+                label8.ForeColor = Color.Red;
+            }
+            else
+            {
+                try
+                {
+                    bag.Open();
+                    cmd.Connection = bag;
+                    //cmd.CommandText = "INSERT INTO Tablo (kid,isim,sinif,sube,resim)VALUES ('" + label6.Text + "','" + textBox1.Text + "','" + comboBox1.Text + "','" + comboBox2.Text + "','" + textBox2.Text + "')";
+                    cmd.CommandText = "INSERT INTO Tablo (Kid,isim,sinif,sube,resim)VALUES " +
+                    "('" + label6.Text + "','" + textBox1.Text + "','" + comboBox1.Text + "','" + comboBox2.Text + "','" + textBox2.Text + "')";
+                    cmd.ExecuteNonQuery();
 
-            label8.Text = "KAYIT YAPILDI";
-            label8.ForeColor = Color.Green;
+                    label8.Text = "KAYIT YAPILDI";
+                    label8.ForeColor = Color.Green;
+
+                    bag.Close();
+                }
+                catch
+                {
+                    bag.Close();
+                    MessageBox.Show("Bu kişi zaten kayıtlı");
+                }
+
+            }
 
 
-
-            bag.Close();
         }
 
-
+        private void kayit_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timer1.Stop();
+            serialPort1.Close();
+        }
 
 
 
