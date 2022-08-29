@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;  // acces e bağlanmak için
 
 namespace Personel_Takip
 {
     public partial class kayit : Form
     {
+        OleDbConnection bag = new OleDbConnection("Provider=Microsoft.Ace.OledDb.12.0;Data Source=Personel-Veri.accdb");
+        OleDbCommand cmd = new OleDbCommand();
+        
         public kayit()
         {
             InitializeComponent();
@@ -79,13 +83,22 @@ namespace Personel_Takip
 
 
          }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            bag.Open();
+            cmd.Connection = bag;
+           //cmd.CommandText = "INSERT INTO Tablo (kid,isim,sinif,sube,resim)VALUES ('" + label6.Text + "','" + textBox1.Text + "','" + comboBox1.Text + "','" + comboBox2.Text + "','" + textBox2.Text + "')";
+            cmd.CommandText = "INSERT INTO Tablo (kid,isim,sinif,sube,resim)VALUES " +
+            "('"+label6.Text+ "','" + textBox1.Text + "','" + comboBox1.Text + "','" + comboBox2.Text + "','" + textBox2.Text + "')";
+            cmd.ExecuteNonQuery();
+
+            label8.Text = "KAYIT YAPILDI";
+            label8.ForeColor = Color.Green;
 
 
 
-
-
-
-
+            bag.Close();
+        }
 
 
 
@@ -110,6 +123,6 @@ namespace Personel_Takip
 
         }
 
-      
+        
     }
 }
